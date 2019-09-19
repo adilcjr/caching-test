@@ -1,8 +1,6 @@
 {
   "addons": [
-    "logentries",
-    "newrelic",
-    "heroku-postgresql"
+    ""
   ],
   "buildpacks": [
     {
@@ -13,18 +11,17 @@
     }
   ],
   "env": {
-    "NEW_RELIC_LICENSE_KEY": {
+    "MEMCACHEDCLOUD_SERVERS": {
       "required": true
     },
-    "NEW_RELIC_LOG": {
+    "MEMCACHEDCLOUD_USERNAME": {
+      "required": true
+    },
+    "MEMCACHEDCLOUD_PASSWORD": {
       "required": true
     }
   },
   "formation": {
   },
-  "name": "fael-intranet-poc",
-  "scripts": {
-    "postdeploy": "rake db:migrate db:seed"
-  },
-  "stack": "heroku-18"
+  "name": "caching-test"
 }
