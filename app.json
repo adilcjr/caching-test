@@ -24,5 +24,8 @@
   },
   "formation": {
   },
-  "name": "caching-test"
+  "name": "caching-test",
+  "scripts": {
+    "postdeploy": "rake db:migrate db:seed"
+  }
 }
