@@ -1,6 +1,5 @@
 {
   "addons": [
-    "heroku-postgresql",
     "memcached"
   ],
   "buildpacks": [
@@ -24,8 +23,5 @@
   },
   "formation": {
   },
-  "name": "caching-test",
-  "scripts": {
-    "postdeploy": "rake db:migrate db:seed"
-  }
+  "name": "caching-test"
 }
