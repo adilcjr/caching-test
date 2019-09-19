@@ -1,15 +1,5 @@
 {
-  "addons": [
-    "memcached"
-  ],
-  "buildpacks": [
-    {
-      "url": "heroku/ruby"
-    },
-    {
-      "url": "heroku/nodejs"
-    }
-  ],
+  "name": "caching-test",
   "env": {
     "MEMCACHEDCLOUD_SERVERS": {
       "required": true
@@ -23,5 +13,16 @@
   },
   "formation": {
   },
-  "name": "caching-test"
+  "addons": [
+    "memcached"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "stack": "heroku-18"
 }
